@@ -10,7 +10,7 @@ Thay đổi lơn thứ hai trong ngành an toàn thông tin là sự ra cu
 
 ## 1.1: Các khái niệm an toàn thông tin (Computer security concepts)
 
-**Một số khái niệm về an toàn thông tin (A Definition of Computer Security)**
+### Một số khái niệm về an toàn thông tin (A Definition of Computer Security)
 
 **Định nghĩa:**\
 Sự bảo vệ cung cấp cho một hệ thống thông tin tự động để đạt được mục tiêu của việc bảo vệ tính toàn vẹn, khả dụng và bảo mật các tài nguyên của hệ thống thông tin (bao gồm phần cứng phần mềm, firmware, thông tin/ dữ liệu và viễn thông)
@@ -27,7 +27,7 @@ Sự bảo vệ cung cấp cho một hệ thống thông tin tự độn
 
 - **Tính khả dụng (Availability)** Đảm bảo hệ thống hoạt động bình thường dối với các đối tượng đã được cấp phép
 
-## Những thách thức của an toàn thông tin (The Challenges of Computer Security)
+### Những thách thức của an toàn thông tin (The Challenges of Computer Security)
 
 1. Bảo mật không đơn giản với người mới. Các yêu cầu liên quan đến công việc bảo mật thường được đánh nhãn bởi những từ nghe có vẻ khá đơn giản và trực quan như: bảo mật, xác thực, toàn vẹn...Nhưng để hiểu được hoàn các cơ chế hoạt động thì không hề dễ dàng.
 2. Trong việc phát triển một cơ chế bảo mật hoặc thuật toán cụ thể, người ta luôn phải xem xét các tấn công có thể đối với những tính năng bảo mật đó. Trong nhiều trường hợp, các tấn công thành công được là nhờ xem xét kỹ lưỡng các cơ chế bằng nhiều cách làm tìm thấy lỗi hổng để rồi khai thác chúng.
@@ -45,6 +45,7 @@ Sự bảo vệ cung cấp cho một hệ thống thông tin tự độn
 Kiến trúc bảo mật OSI định nghĩa một cách tiếp cận có hệ thống đối với 7 tầng của mô hình OSI nhằm đảm bảo bảo mật trong quá trình truyền dữ liệu trong không gian mạng. Nó đươc phát triển như một tiêu chuẩn quốc tế và đã được cộng đồng đón nhận
 
 Kiến trúc bảo mật OSI tâp trung vào một số khái niệm sau:
+![OSI Security Architecture](/NetworkSecurityEssentials/OSISecurityArchitecture.png)
 
 - **Tấn công bảo mật (Security attack)**: Là một hành động làm tổn hại đến bảo mật thông tin thuộc sở hữu của một tổ chức nào đó.
 - **Cơ chế bảo mật (Security mechanism)**: Một tiến trình (hoặc một thiết bị được tích hợp để thực hiện tiến trình) được thiết kế để phát hiện, ngăn chặn tấn công bảo mật hoặc phục hồi tổn hại sau những cuộc tấn công.
@@ -52,39 +53,45 @@ Kiến trúc bảo mật OSI tâp trung vào một số khái niệm sau
 
 ## 1.3: Tấn công bảo mật (Security attacks)
 
-**Tấn công thụ động (Passive Attacks)**\
-Các cuộc tấn công thụ động bản chất giống như nghe lén theo dõi khi mà dữ liệu được truyền đi. Tấn công thụ động có 2 kiểu chính là lấy cắp nội dung tin nhắn (release of message contents) và phân tích lưu lượng (traffic analysis)
+### 1.3.1 Tấn công thụ động (Passive Attacks)
 
-//
+Các cuộc tấn công thụ động bản chất giống như nghe lén, theo dõi khi mà dữ liệu được truyền đi.
+Tấn công thụ động có 2 kiểu là lấy cắp nội dung tin nhắn (release of message contents) và phân tích lưu lượng (traffic analysis).
 
-## 1.2: Kiến trúc bảo mật OSI (The OSI security architecture)
+- **Lấy cắp nội dung tin nhắn (release of message contents)**:
+  ![Release of message contents](/NetworkSecurityEssentials/ReleaseOfMessageContents.png)
+  Một cuộc nói chuyện qua điện thoại, một tin nhắn, một tệp tin được gửi đi có thể chứa các thông tin nhạy cảm và bảo mật. Chúng ta cần ngăn những kẻ tấn công biêt được, lấy được những thông tin này.
+- **Phân tích lưu lượng (traffic analysis)**:
+  ![Traffic analysis](/NetworkSecurityEssentials/TrafficAnalysis.png)
+  Giả sử rằng chúng ta có cách che giấu nội dung của tin nhắn hoặc các thông tin khác để đối thủ, ngay cả khi họ bắt được tin nhắn thì cũng không thể trích xuất thông tin từ thông điệp. Kỹ thuật phổ biến để che giấu nội dung là mã hóa. Trong trường họp này kẻ tấn công không thể được được nội dung của tin nhắn mà chỉ hiểu được kiểu mẫu và độ dài của mã hóa.
 
-- Mục tiêu cơ bản của an toàn thông tin
+Tấn công thụ động khó bị phát hiện vì không thay đổi dữ liệu hoặc tài nguyên hệ thống. Thông thường cả người gửi và người nhận tin nhắn đều không thể xác định được tin nhắn được đọc bởi bên thứ 3. Tuy nhiên mã hóa dữ liệu trước khi gửi đi là một cách hữu hiệu để ngăn chặn các cuộc tấn công thụ động thay vì cố tình tìm kiếm và phát hiện các cuộc tấn công.
 
-- Đảm bảo tính bảo mật
-- Đảm bảo tính toàn vẹn
-- Đảm bảo tính xác thực
-- Đảm bảo tính sẵn sàng
+### 1.3.2 Tấn công chủ động (Active Attacks)
 
-ITU (Tổ chức viễn thông quốc tế thuộc Liên hiệp quốc)
+Tấn công chủ động liên quan đến thay dổi luồng dữ liệu (data stream) hoặc tạo ra một luồng dữ liệu sai.
+Có thể chia tấn công chủ động là 4 loại:
 
-The International Telecommunication Union (ITU) Telecommunication Standardization Sector (ITU-T)is a United Nations-sponsored agency that develops standards, called Recommendations, relating to telecommunications and to open systems interconnection (OSI).
-The OSI security architecture was developed in the context of the OSI protocol architecture, which is described in Appendix D.
+-
 
 # New words
 
-| EN          | VI                     |
-| ----------- | ---------------------- |
-| influence   | ảnh hưởng              |
-| novice      | người mới              |
-| mechanism   | cơ chế                 |
-| exploit     | khai thác              |
-| typically   | tiêu biểu              |
-| tendency    | khuynh hướng           |
-| grocery     | cửa hàng tạp hóa       |
-| enumerate   | liệt kê                |
-| assess      | đánh giá               |
-| compound    | hỗn hợp                |
-| compromises | thỏa hiệp, làm tổn hại |
-| intended    | dự định                |
-| opponent    | phản đối, dịch thủ     |
+| EN           | VI                     |
+| ------------ | ---------------------- |
+| confidential | bảo mật                |
+| influence    | ảnh hưởng              |
+| novice       | người mới              |
+| mechanism    | cơ chế                 |
+| exploit      | khai thác              |
+| typically    | tiêu biểu              |
+| tendency     | khuynh hướng           |
+| grocery      | cửa hàng tạp hóa       |
+| enumerate    | liệt kê                |
+| assess       | đánh giá               |
+| compound     | hỗn hợp                |
+| compromises  | thỏa hiệp, làm tổn hại |
+| intended     | dự định                |
+| opponent     | phản đối, dịch thủ     |
+| subtle       | tinh vi, xảo trá       |
+| feasible     | khả thi                |
+| involve      | liên quan đến          |
