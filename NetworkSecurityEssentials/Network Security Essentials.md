@@ -72,26 +72,39 @@ Tấn công thụ động khó bị phát hiện vì không thay đổi dữ li�
 Tấn công chủ động liên quan đến thay dổi luồng dữ liệu (data stream) hoặc tạo ra một luồng dữ liệu sai.
 Có thể chia tấn công chủ động là 4 loại:
 
--
+- **Giả mạo (Masquerade)**: Diễn ra khi mà một thực thể giả mạo một thực thể khác. Tấn công giả mạo thường đi kèm theo hình thức tấn công chủ động khác. Ví dụ, trình tự xác thực có thể được mô phỏng sau khi một trình tự xác thực đúng được thực hiện.
+  ![Masquerade](/NetworkSecurityEssentials/Masquerade.png)
+- **Phát lại (Replay)**: Kẻ tấn công bắt lấy một tin nhắn được truyền đi thông qua một kênh bị động sau đó phát lại tin nhắn gian lận hoặc trì hoãn một thời gian.
+  ![Replay](/NetworkSecurityEssentials/Replay.png)
+- **Sửa đổi tin nhắn (Modification of Message)**: Kẻ tấn công sửa đổi tin nhắn đã được gửi đi. Người nhận có thể nhận được tin nhắn không an toàn hoặc vô nghĩa. Kiểu tấn công này sử dụng để thao túng nội dung tin nhắn hoặc làm gián đoạn quá trình giao tiếp.
+  ![Modification of Message](/NetworkSecurityEssentials/ModificationOfMessages.png)
+- **Từ chối phục vụ (Denial of service - DoS)**: Kẻ tấn công gửi một lượng truy cập lớn vào hệ thống, mạng, hoặc thiết bị, khiến cho thực thể bị tấn công từ chối hoạt động kể cả đối với người dùng đã được xác thực do bị quá tải.
+  ![Denial of service](/NetworkSecurityEssentials/DenialOfService.png)
+
+Khá là khó để ngăn chặn tuyệt đối các cuộc tấn công chủ động vì có quá nhiều lỗ hổng tiềm ẩn về mặt vật lý, phần mềm và cả mạng. Chính vì thế mục tiêu là phát hiện rồi phục hồi sau bất kỳ sự gián đoạn hoặc chậm trễ nào do chúng gây ra.
+
+X800 định nghĩa 1 dịch vụ bảo mật là 1 dịch vụ đảm bảo an toàn của hệ thống và quá trình truyền dữ liệu
 
 # New words
-
-| EN           | VI                     |
-| ------------ | ---------------------- |
-| confidential | bảo mật                |
-| influence    | ảnh hưởng              |
-| novice       | người mới              |
-| mechanism    | cơ chế                 |
-| exploit      | khai thác              |
-| typically    | tiêu biểu              |
-| tendency     | khuynh hướng           |
-| grocery      | cửa hàng tạp hóa       |
-| enumerate    | liệt kê                |
-| assess       | đánh giá               |
-| compound     | hỗn hợp                |
-| compromises  | thỏa hiệp, làm tổn hại |
-| intended     | dự định                |
-| opponent     | phản đối, dịch thủ     |
-| subtle       | tinh vi, xảo trá       |
-| feasible     | khả thi                |
-| involve      | liên quan đến          |
+| EN           | VI                       |
+| ------------ | ------------------------ |
+| confidential | bảo mật                  |
+| influence    | ảnh hưởng                |
+| novice       | người mới                |
+| mechanism    | cơ chế                   |
+| exploit      | khai thác                |
+| typically    | tiêu biểu                |
+| tendency     | khuynh hướng             |
+| grocery      | cửa hàng tạp hóa         |
+| enumerate    | liệt kê                  |
+| assess       | đánh giá                 |
+| compound     | hỗn hợp                  |
+| compromises  | thỏa hiệp, làm tổn hại   |
+| intend       | có dự định               |
+| opponent     | phản đối, dịch thủ       |
+| subtle       | tinh vi, xảo trá         |
+| feasible     | khả thi                  |
+| involve      | liên quan đến            |
+| portion      | phần, đoạn trích, lô đất |
+| legitimate   | hợp pháp                 |
+| perhaps      | có lẽ                    |
