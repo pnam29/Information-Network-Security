@@ -1,0 +1,34 @@
+@startwbs
+
+<style>
+wbsDiagram {
+  FontSize 24
+}
+</style>
+
+* Security Services X800
+
+** Authentication
+*** Peer Entity Authentication
+*** Data-Origin Authentication
+
+** Access control
+
+** Data confidentiality
+*** Connection Confidentiality
+*** Connectionless Confidentiality
+*** Selective-Field Confidentiality
+*** Traffic-Flow Confidentiality
+
+** Data integrity
+*** Connection Integrity with Recovery
+*** Connection Integrity without Recovery
+*** Selective-Field Connection Integrity
+*** Connectionless Integrity
+*** Selective-Field Connectionless Integrity
+
+** Nonrepudiation
+*** Nonrepudiation, Origin
+*** Nonrepudiation, Destination
+
+@endwbs
