@@ -113,19 +113,25 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
 
 - **Cơ chế bảo mật cụ thể (Specific security mechanisms)**
   - **Encipherment (Mã Hoá)**: Sử dụng các thuật toán để biến đổi dữ liệu một cách khó hiểu. Việc mã hoá và giải mã có thể phụ thuộc vào 0 hoặc nhiều khoá.
-  - **Digital Signature (Chữ ký số)**: Dữ liệu được thêm vào cho phép người nhận xác thực được nguồn gốc và tính đúng đắn của dữ liệu nhận được
-  - **Access Control (Kiểm soát truy cập)**
-  - **Data Integrity (Toàn vẹn dữ liệu)**
-  - **Authentication Exchange (Trao đổi xác thực)**
-  - **Traffic Padding (Đệm lưu lượng)**
-  - **Routing Control (Kiểm soát định tuyến)**
-  - **Notarization (Công chứng)**
-- **Cơ chế bảo mật phổ biến (Pervasive security mechanisms)**
-  - **Trusted Functionality (Chức năng đáng tin cậy)**
-  - **Security Label (Đánh nhãn bảo mật)**
-  - **Event Detection (Phát hiện sự kiện)**
-  - **Security Audit Trail (Con đường kiểm tra bảo mật)**
-  - **Security Recovery (Phục hồi bảo mật)**
+  - **Digital Signature (Chữ ký số)**: Dữ liệu được thêm vào tin nhắn hoặc tài liệu cho phép người nhận xác thực được nguồn gốc và tính đúng đắn của thông tin nhận được.
+  - **Access Control (Kiểm soát truy cập)**: cơ chế kiểm tra các quyền truy cập vào tài nguyên.
+  - **Data Integrity (Toàn vẹn dữ liệu)**: Các cơ chế sử dụng để đảm bảo tính đúng đắn của khối dữ liệu hoặc luồng dữ liệu (stream of data units).
+  - **Authentication Exchange (Trao đổi xác thực)**: Một cơ chế xác thực danh tính của thực thể bằng cách trao đổi thông tin. _Một đối tượng giải mã thành công một tin nhắn bằng cách sử dụng 1 khoá trong cặp khoá (key pair). Họ có thể suy ra người có khóa tương ứng, cũng chính là danh tính người gửi tin nhắn_
+  - **Traffic Padding (Đệm lưu lượng)**: Là kỹ chèn các bit vào các khoảng trống trong luồng dữ liệu (data stream) nhằm hạn chế, gây cản trở việc phân tích lưu lượng.
+  - **Routing Control (Kiểm soát định tuyến)**: Cho phép lựa chọn đường đi về mặt vật lý cho một số dữ liệu, có thể thay đổi đường đi này, đặc biệt là khi có nghi ngờ về việc thiếu bảo mật.
+  - **Notarization (Công chứng)**: Sử dụng một bên thứ 3 để đảm bảo bảo mật trong quá trình truyền dữ liệu.
+- **Cơ chế bảo mật phổ biến (Pervasive security mechanisms)**: Các cơ chế không dành riêng cho bất kỳ giao thức hay dịch vụ bảo mật OSI cụ thể nào.
+  - **Trusted Functionality (Chức năng đáng tin cậy)**: thứ được coi là đúng đối với một số tiêu chí.
+  - **Security Label (Nhãn bảo mật)**: Tạo ràng buộc với một tài tài nguyên (hoặc một khối dữ liệu) để đặt tên hoặc định rõ các thuộc tính bảo mật của tài nguyên đó.
+  - **Event Detection (Phát hiện sự kiện)**: Phát hiện các sự kiện liên quan tới bảo mật.
+  - **Security Audit Trail (Con đường kiểm tra bảo mật)**: Thu tập dữ liệu có tiềm năng để thuận tiện đánh giá bảo mật.
+  - **Security Recovery (Phục hồi bảo mật)**: Tuỳ theo yêu cầu của cơ chế, chẳng hạn như các chức năng quản lý và xử lý sự kiện, đồng thời thực hiện các hành động khôi phục.
+
+**Mối quan hệ giữa Dịch vụ bảo mật và Cơ chế bảo mật (Relationship Between Security Services And Mechanisms)**
+![Relationship Between Security Services And Mechanisms](./img/RelationshipBetweenSecurityServicesAndMechanisms.png)
+
+### 1.6 A MODEL FOR NETWORK SECURITY
+
 
 # New words
 
@@ -141,6 +147,7 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
 | enumerate     | liệt kê                  |
 | establishment | sự thành lập             |
 | exploit       | khai thác                |
+| facilitate    | tạo điều kiện            |
 | feasible      | khả thi                  |
 | grocery       | cửa hàng tạp hóa         |
 | influence     | ảnh hưởng                |
@@ -152,10 +159,11 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
 | mechanism     | cơ chế                   |
 | novice        | người mới                |
 | opponent      | phản đối, dịch thủ       |
+| perceive      | nhận thức, lĩnh hội      |
 | perhaps       | có lẽ                    |
 | portion       | phần, đoạn trích, lô đất |
+| prove         | chứng minh               |
 | subtle        | tinh vi, xảo trá         |
 | tendency      | khuynh hướng             |
 | typically     | tiêu biểu                |
 | violation     | sự vi phạm               |
-| prove         | chứng minh               |
