@@ -67,7 +67,7 @@ Tấn công thụ động có 2 kiểu là lấy cắp nội dung tin nhắn (re
 
 Tấn công thụ động khó bị phát hiện vì không thay đổi dữ liệu hoặc tài nguyên hệ thống. Thông thường cả người gửi và người nhận tin nhắn đều không thể xác định được tin nhắn được đọc bởi bên thứ 3. Tuy nhiên mã hóa dữ liệu trước khi gửi đi là một cách hữu hiệu để ngăn chặn các cuộc tấn công thụ động thay vì cố tình tìm kiếm và phát hiện các cuộc tấn công.
 
-### 1.3.2 Tấn công chủ động (Active Attacks)
+### 1.3.2 Tấn công chủ động (Active attacks)
 
 Tấn công chủ động liên quan đến thay dổi luồng dữ liệu (data stream) hoặc tạo ra một luồng dữ liệu sai.
 Có thể chia tấn công chủ động là 4 loại:
@@ -76,18 +76,20 @@ Có thể chia tấn công chủ động là 4 loại:
   ![Masquerade](./img/Masquerade.png)
 - **Phát lại (Replay)**: Kẻ tấn công bắt lấy một tin nhắn được truyền đi thông qua một kênh bị động sau đó phát lại tin nhắn gian lận hoặc trì hoãn một thời gian.
   ![Replay](./img/Replay.png)
-- **Sửa đổi tin nhắn (Modification of Message)**: Kẻ tấn công sửa đổi tin nhắn đã được gửi đi. Người nhận có thể nhận được tin nhắn không an toàn hoặc vô nghĩa. Kiểu tấn công này sử dụng để thao túng nội dung tin nhắn hoặc làm gián đoạn quá trình giao tiếp.
+- **Sửa đổi tin nhắn (Modification of message)**: Kẻ tấn công sửa đổi tin nhắn đã được gửi đi. Người nhận có thể nhận được tin nhắn không an toàn hoặc vô nghĩa. Kiểu tấn công này sử dụng để thao túng nội dung tin nhắn hoặc làm gián đoạn quá trình giao tiếp.
   ![Modification of Message](./img/ModificationOfMessages.png)
 - **Từ chối phục vụ (Denial of service - DoS)**: Kẻ tấn công gửi một lượng truy cập lớn vào hệ thống, mạng, hoặc thiết bị, khiến cho thực thể bị tấn công từ chối hoạt động kể cả đối với người dùng đã được xác thực do bị quá tải.
   ![Denial of service](./img/DenialOfService.png)
 
 Khá là khó để ngăn chặn tuyệt đối các cuộc tấn công chủ động vì có quá nhiều lỗ hổng tiềm ẩn về mặt vật lý, phần mềm và cả mạng. Chính vì thế mục tiêu là phát hiện rồi phục hồi sau bất kỳ sự gián đoạn hoặc chậm trễ nào do chúng gây ra.
 
+### 1.4 Dịch vụ bảo mật (Security services)
+
 X800 định nghĩa 1 dịch vụ bảo mật là 1 dịch vụ đảm bảo an toàn của hệ thống và quá trình truyền dữ liệu
 RFC 2828 định nghĩa một tiến trình hoặc một dịch vụ được cấp bở một hệ thống để đưa ra một loại bảo vệ đặc biệt cho tài nguyên của hệ thống, các dịch vụ bảo mật (security services) thực hiện các chính sách bảo mật và các cơ chế bảo mật.
 
 X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc biệt (specific services).
-![Security Services X800](./img/SecurityServicesX800.svg)
+![Security services X800](./img/SecurityServicesX800.svg)
 
 - **Xác thực (Authentication)**: Là tiến trình xác thực người dùng hoặc thiết bị nhằm mục đích cấp phép hoặc từ chối truy cập vào hệ thống hoặc thiết bị. Khi khởi tạo kết nối cần đảm bảo 2 thực thể phải được xác thực sau đó kết nối của 2 thực thể phải được đảm bảo là không bị cân thiệp.
   - **Xác thực ngang hàng (Peer entity authentication)**: Sử dụng cùng với kết nối logic để xác thực của các thực thể được kết nối. Hai thực thể được coi là ngang hàng nếu như giao tiếp với nhau cùng một giao thức nhưng khác hệ thống. Xác thực ngang hàng sử dụng khi khởi tạo hoặc trong quá trình truyền dữ liệu trên một kết nối. Bên cạnh đó liên tục xác nhận rằng thực thể cần được xác thực không phải là thực thể giả mạo hoặc được phát lại (replay) của kết nối trước đó.
@@ -103,8 +105,27 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
   - **Selective-Field Connection integrity**: Cung cấp tính đúng đắn cho một số trường thuộc khối dữ liệu, chỉ ra các trường đã bị sửa, thêm, xoá, hoặc phát lại trong số các trường đã chọn.
   - **Connectionless integrity**: Cung cấp tính toàn vẹn của một khối dữ liệu phi kết nối (connectionless data block), phát hiện sửa đổi và phát lại dữ liệu.
   - **Selective-Field Connectionless Integrity**: Cung cấp tính đúng đăn cho một số trường thược khối dữ liệu phi kết nối (connectionless data block), chỉ ra trường nào bị thay đổi trong các trường đã chọn.
-- **Nonrepudiation**: Ngăn chặn người nhận hoặc người gửi từ chối một tin nhắn đã được truyền đi.
- 
+- **Nonrepudiation**: Ngăn chặn người nhận hoặc người gửi từ chối một tin nhắn đã được truyền đi. Như vậy, khi mà một tin nhắn đã được gửi đi, người nhận có thể chứng mình rằng người gửi đã thực sự gửi tin nhắn đó. Tương tự, khi mà tin nhắn được nhận, người gửi cũng có thể chứng minh rằng người nhận đã thật sự nhận được tin nhắn đó.
+
+### 1.5 Cơ chế bảo mật (Security mechanisms)
+
+![Security mechanisms](./img/SecurityMechanismsX800.svg)
+
+- **Cơ chế bảo mật cụ thể (Specific security mechanisms)**
+  - **Encipherment (Mã Hoá)**: Sử dụng các thuật toán để biến đổi dữ liệu một cách khó hiểu. Việc mã hoá và giải mã có thể phụ thuộc vào 0 hoặc nhiều khoá.
+  - **Digital Signature (Chữ ký số)**: Dữ liệu được thêm vào cho phép người nhận xác thực được nguồn gốc và tính đúng đắn của dữ liệu nhận được
+  - **Access Control (Kiểm soát truy cập)**
+  - **Data Integrity (Toàn vẹn dữ liệu)**
+  - **Authentication Exchange (Trao đổi xác thực)**
+  - **Traffic Padding (Đệm lưu lượng)**
+  - **Routing Control (Kiểm soát định tuyến)**
+  - **Notarization (Công chứng)**
+- **Cơ chế bảo mật phổ biến (Pervasive security mechanisms)**
+  - **Trusted Functionality (Chức năng đáng tin cậy)**
+  - **Security Label (Đánh nhãn bảo mật)**
+  - **Event Detection (Phát hiện sự kiện)**
+  - **Security Audit Trail (Con đường kiểm tra bảo mật)**
+  - **Security Recovery (Phục hồi bảo mật)**
 
 # New words
 
@@ -137,3 +158,4 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
 | tendency      | khuynh hướng             |
 | typically     | tiêu biểu                |
 | violation     | sự vi phạm               |
+| prove         | chứng minh               |

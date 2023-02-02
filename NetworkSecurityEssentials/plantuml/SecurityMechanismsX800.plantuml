@@ -1,0 +1,21 @@
+@startmindmap
+
+* Security Mechanisms (X.800)
+** Specific security mechanisms
+*** Encipherment
+*** Digital Signature
+*** Access Control
+*** Data Integrity
+*** Authentication Exchange
+*** Traffic Padding
+*** Routing Control
+*** Notarization
+
+** Pervasive security mechanisms
+*** Trusted Functionality
+*** Security Label
+*** Event Detection
+*** Security Audit Trail
+*** Security Recovery
+
+@endmindmap

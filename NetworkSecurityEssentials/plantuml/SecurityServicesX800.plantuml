@@ -1,12 +1,6 @@
-@startwbs
+@startmindmap
 
-<style>
-wbsDiagram {
-  FontSize 24
-}
-</style>
-
-* Security Services X800
+* Security Services (X.800)
 
 ** Authentication
 *** Peer Entity Authentication
@@ -31,4 +25,4 @@ wbsDiagram {
 *** Nonrepudiation, Origin
 *** Nonrepudiation, Destination
 
-@endwbs
+@endmindmap
