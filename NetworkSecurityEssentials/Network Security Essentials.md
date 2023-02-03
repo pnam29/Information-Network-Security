@@ -60,9 +60,12 @@ Tấn công thụ động có 2 kiểu là lấy cắp nội dung tin nhắn (re
 
 - **Lấy cắp nội dung tin nhắn (release of message contents)**:
   ![Release of message contents](./img/ReleaseOfMessageContents.png)
+
   Một cuộc nói chuyện qua điện thoại, một tin nhắn, một tệp tin được gửi đi có thể chứa các thông tin nhạy cảm và bảo mật. Chúng ta cần ngăn những kẻ tấn công biêt được, lấy được những thông tin này.
+
 - **Phân tích lưu lượng (traffic analysis)**:
   ![Traffic analysis](./img/TrafficAnalysis.png)
+
   Giả sử rằng chúng ta có cách che giấu nội dung của tin nhắn hoặc các thông tin khác để đối thủ, ngay cả khi họ bắt được tin nhắn thì cũng không thể trích xuất thông tin từ thông điệp. Kỹ thuật phổ biến để che giấu nội dung là mã hóa. Trong trường họp này kẻ tấn công không thể được được nội dung của tin nhắn mà chỉ hiểu được kiểu mẫu và độ dài của mã hóa.
 
 Tấn công thụ động khó bị phát hiện vì không thay đổi dữ liệu hoặc tài nguyên hệ thống. Thông thường cả người gửi và người nhận tin nhắn đều không thể xác định được tin nhắn được đọc bởi bên thứ 3. Tuy nhiên mã hóa dữ liệu trước khi gửi đi là một cách hữu hiệu để ngăn chặn các cuộc tấn công thụ động thay vì cố tình tìm kiếm và phát hiện các cuộc tấn công.
@@ -73,12 +76,19 @@ Tấn công chủ động liên quan đến thay dổi luồng dữ liệu (data
 Có thể chia tấn công chủ động là 4 loại:
 
 - **Giả mạo (Masquerade)**: Diễn ra khi mà một thực thể giả mạo một thực thể khác. Tấn công giả mạo thường đi kèm theo hình thức tấn công chủ động khác. Ví dụ, trình tự xác thực có thể được mô phỏng sau khi một trình tự xác thực đúng được thực hiện.
+
   ![Masquerade](./img/Masquerade.png)
+
 - **Phát lại (Replay)**: Kẻ tấn công bắt lấy một tin nhắn được truyền đi thông qua một kênh bị động sau đó phát lại tin nhắn gian lận hoặc trì hoãn một thời gian.
+
   ![Replay](./img/Replay.png)
+
 - **Sửa đổi tin nhắn (Modification of message)**: Kẻ tấn công sửa đổi tin nhắn đã được gửi đi. Người nhận có thể nhận được tin nhắn không an toàn hoặc vô nghĩa. Kiểu tấn công này sử dụng để thao túng nội dung tin nhắn hoặc làm gián đoạn quá trình giao tiếp.
+
   ![Modification of Message](./img/ModificationOfMessages.png)
+
 - **Từ chối phục vụ (Denial of service - DoS)**: Kẻ tấn công gửi một lượng truy cập lớn vào hệ thống, mạng, hoặc thiết bị, khiến cho thực thể bị tấn công từ chối hoạt động kể cả đối với người dùng đã được xác thực do bị quá tải.
+
   ![Denial of service](./img/DenialOfService.png)
 
 Khá là khó để ngăn chặn tuyệt đối các cuộc tấn công chủ động vì có quá nhiều lỗ hổng tiềm ẩn về mặt vật lý, phần mềm và cả mạng. Chính vì thế mục tiêu là phát hiện rồi phục hồi sau bất kỳ sự gián đoạn hoặc chậm trễ nào do chúng gây ra.
@@ -89,6 +99,7 @@ X800 định nghĩa 1 dịch vụ bảo mật là 1 dịch vụ đảm bảo an 
 RFC 2828 định nghĩa một tiến trình hoặc một dịch vụ được cấp bở một hệ thống để đưa ra một loại bảo vệ đặc biệt cho tài nguyên của hệ thống, các dịch vụ bảo mật (security services) thực hiện các chính sách bảo mật và các cơ chế bảo mật.
 
 X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc biệt (specific services).
+
 ![Security services X800](./img/SecurityServicesX800.svg)
 
 - **Xác thực (Authentication)**: Là tiến trình xác thực người dùng hoặc thiết bị nhằm mục đích cấp phép hoặc từ chối truy cập vào hệ thống hoặc thiết bị. Khi khởi tạo kết nối cần đảm bảo 2 thực thể phải được xác thực sau đó kết nối của 2 thực thể phải được đảm bảo là không bị cân thiệp.
