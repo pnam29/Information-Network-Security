@@ -59,11 +59,13 @@ Các cuộc tấn công thụ động bản chất giống như nghe lén, theo 
 Tấn công thụ động có 2 kiểu là lấy cắp nội dung tin nhắn (release of message contents) và phân tích lưu lượng (traffic analysis).
 
 - **Lấy cắp nội dung tin nhắn (release of message contents)**:
+
   ![Release of message contents](./img/ReleaseOfMessageContents.png)
 
   Một cuộc nói chuyện qua điện thoại, một tin nhắn, một tệp tin được gửi đi có thể chứa các thông tin nhạy cảm và bảo mật. Chúng ta cần ngăn những kẻ tấn công biêt được, lấy được những thông tin này.
 
 - **Phân tích lưu lượng (traffic analysis)**:
+
   ![Traffic analysis](./img/TrafficAnalysis.png)
 
   Giả sử rằng chúng ta có cách che giấu nội dung của tin nhắn hoặc các thông tin khác để đối thủ, ngay cả khi họ bắt được tin nhắn thì cũng không thể trích xuất thông tin từ thông điệp. Kỹ thuật phổ biến để che giấu nội dung là mã hóa. Trong trường họp này kẻ tấn công không thể được được nội dung của tin nhắn mà chỉ hiểu được kiểu mẫu và độ dài của mã hóa.
@@ -139,10 +141,10 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
   - **Security Recovery (Phục hồi bảo mật)**: Tuỳ theo yêu cầu của cơ chế, chẳng hạn như các chức năng quản lý và xử lý sự kiện, đồng thời thực hiện các hành động khôi phục.
 
 **Mối quan hệ giữa Dịch vụ bảo mật và Cơ chế bảo mật (Relationship Between Security Services And Mechanisms)**
+
 ![Relationship Between Security Services And Mechanisms](./img/RelationshipBetweenSecurityServicesAndMechanisms.png)
 
 ### 1.6 A MODEL FOR NETWORK SECURITY
-
 
 # New words
 
