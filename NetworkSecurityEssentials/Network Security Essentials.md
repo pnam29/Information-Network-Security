@@ -144,7 +144,30 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
 
 ![Relationship Between Security Services And Mechanisms](./img/RelationshipBetweenSecurityServicesAndMechanisms.png)
 
-### 1.6 A MODEL FOR NETWORK SECURITY
+### 1.6 Một mô hình an ninh mạng (Model for Network Security)
+
+![Model for Network Security](./img/ModelForNetworkSecurity.png)
+Các yếu tố bảo mật được bật khi cần thiết hoặc theo mong muốn của người sử dụng nhằm bảo vệ thông tin được gửi đi khỏi các kẻ tấn công - người mà gây ra các mối đe doạ liên quan đến bảo mật, xác thực, và nhiều vấn đề khác. Tất cả các kỹ thuật cung cấp bảo mật đều có 2 phần:
+
+1. Làm biến đổi các thông tin bảo mật cần gửi đi. Ví dụ:
+   - Mã hoá tin nhắn - khiến kẻ tấn công không thể biết được nội dung tin nhắn.
+   - Ký số - thêm các thông tin dựa trên nội dung thông tin nhằm xác định danh tính người gửi
+2. Một thông tin bí mật được biết bởi 2 người và mong muốn là chỉ 2 người biết. Ví dụ như khoá (key) thứ góp phần tạo ra các đoạn dữ liệu sau mã hoá cũng như phần dữ liệu được thêm vào (ky số)
+
+Một bên thứ 3 đáng tin (trusted third party) là cần thiết để có được bảo mật trong quá trình truyền dữ liệu. Bên thứ 3 này phân phối các thông tin bảo mật tới 2 thực thể thực hiện trao đổi thông tin và ngăn kẻ tấn công tiếp cận được những thông tin bảo mật này. Đồng thời bên thứ 3 này cũng có trách nhiệm xác minh độ tin cậy của người gửi và người nhận trong quá trình trao đổi thông tin này
+
+**Nhiệm vụ cơ bản trong việc thiết kế một dịch vụ an ninh:**
+
+1. Thiết kế một thuật toán thực hiện các công việc liên quan đến bảo mật mà không thể bị can thiệp làm thay đổi chức năng
+2. Tạo các thông tin bí mật (secret information) bằng thuật toán
+3. Phát triền các phương pháp để phân phối và chia sẻ thông tin bí mật (secret information)
+4. Chỉ định một giao thức thứ mà sử dụng thuật toán bảo mật và thông tin bí mật được
+   sử dụng bở 2 đầu của cuộc giao tiếp
+
+**Mô hình bảo mật truy cập mạng**
+
+![Network Access Security Model](./img/NetworkAccessSecurityModel.png)
+
 
 # New words
 
@@ -156,6 +179,7 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
 | compromises   | thỏa hiệp, làm tổn hại   |
 | concerned     | lo lắng, quan tâm        |
 | confidential  | bảo mật                  |
+| desirable     | mong muốn, ao ước        |
 | devise        | chỉ ra, phát minh        |
 | enumerate     | liệt kê                  |
 | establishment | sự thành lập             |
@@ -171,7 +195,7 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
 | legitimate    | hợp pháp                 |
 | mechanism     | cơ chế                   |
 | novice        | người mới                |
-| opponent      | phản đối, dịch thủ       |
+| opponent      | phản đối, địch thủ       |
 | perceive      | nhận thức, lĩnh hội      |
 | perhaps       | có lẽ                    |
 | portion       | phần, đoạn trích, lô đất |
