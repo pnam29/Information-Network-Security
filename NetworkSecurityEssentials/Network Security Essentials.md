@@ -12,8 +12,9 @@ Thay đổi lơn thứ hai trong ngành an toàn thông tin là sự ra cu
 
 ### Một số khái niệm về an toàn thông tin (A Definition of Computer Security)
 
-**Định nghĩa:**\
-Sự bảo vệ cung cấp cho một hệ thống thông tin tự động để đạt được mục tiêu của việc bảo vệ tính toàn vẹn, khả dụng và bảo mật các tài nguyên của hệ thống thông tin (bao gồm phần cứng phần mềm, firmware, thông tin/ dữ liệu và viễn thông)
+- **Định nghĩa:**
+Theo Sổ tay bảo mật máy tính NIST (NIST95):\
+Sự bảo vệ cung cấp cho một hệ thống thông tin tự động nhằm mục tiêu duy trì tính toàn vẹn, khả dụng và bảo mật các tài nguyên thuộc hệ thống (bao gồm phần cứng phần mềm, firmware, thông tin/ dữ liệu và viễn thông)
 
 - **Tính bảo mật (Confidentiality):**
 
