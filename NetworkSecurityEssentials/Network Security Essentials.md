@@ -19,14 +19,14 @@ Sự bảo vệ cung cấp cho một hệ thống thông tin tự động 
 - **Tính bảo mật (Confidentiality):**
 
   - **Bảo mật dữ liệu (Data confidentiality):** Đảm bảo rằng thông tin riêng tư hoặc bí mật không được cung cấp hoặc tiết lộ cho những người không có quyền truy cập chúng.
-  - **Sự riêng tư:** Chỉ rõ các các nhân có quyền điều khiển, thu thập, lưu trữ, sử dụng các tài nguyên cũng như thông tin của hệ thống
+  - **Sự riêng tư (Privacy):** Chỉ rõ các các cá nhân có quyền điều khiển, thu thập, lưu trữ, sử dụng các tài nguyên cũng như thông tin của hệ thống
 
 - **Tính toàn vẹn (Integrity):**
 
   - **Toàn vẹn dữ liệu (Data integrity)** Đảm bảo rằng thông tin và chương trình chỉ được thay đổi theo cách được chỉ định và bởi những người được cho phép.
-  - **Toàn vẹn hệ thống (System integrity)** Đảm bảo rằng hệ thống hoạt động bình thường và không thể bị tác động một cách vô ý hay cố tình mà chưa được cho phép
+  - **Toàn vẹn hệ thống (System integrity)** Đảm bảo rằng hệ thống hoạt động bình thường và không thể bị tác động mà chưa được cho phép kể cả vô tình hay cố tình.
 
-- **Tính khả dụng (Availability)** Đảm bảo hệ thống hoạt động bình thường dối với các đối tượng đã được cấp phép
+- **Tính khả dụng (Availability)** Đảm bảo hệ thống hoạt động bình thường dối với các đối tượng đã được cấp phép.
 
 ### Những thách thức của an toàn thông tin (The Challenges of Computer Security)
 
@@ -43,14 +43,14 @@ Sự bảo vệ cung cấp cho một hệ thống thông tin tự động 
 
 ## 1.2: Kiến trúc bảo mật OSI (The OSI security architecture)
 
-Kiến trúc bảo mật OSI định nghĩa một cách tiếp cận có hệ thống đối với 7 tầng của mô hình OSI nhằm đảm bảo bảo mật trong quá trình truyền dữ liệu trong không gian mạng. Nó đươc phát triển như một tiêu chuẩn quốc tế và đã được cộng đồng đón nhận
+Kiến trúc bảo mật OSI định nghĩa một cách tiếp cận có hệ thống đối với 7 tầng của mô hình OSI nhằm đảm bảo bảo mật trong quá trình truyền dữ liệu trên không gian mạng. Nó đươc phát triển như một tiêu chuẩn quốc tế và đã được cộng đồng đón nhận
 
-Kiến trúc bảo mật OSI tâp trung vào một số khái niệm sau:
+Kiến trúc bảo mật OSI tâp trung vào 3 khái niệm sau:
 ![OSI Security Architecture](./img/OSISecurityArchitecture.png)
 
-- **Tấn công bảo mật (Security attack)**: Là một hành động làm tổn hại đến bảo mật thông tin thuộc sở hữu của một tổ chức nào đó.
+- **Tấn công bảo mật (Security attack)**: Là nỗ lực của một người hoặc một tổ chức nhằm chiếm quyền và truy cập trái phép vào hệ thống nhằm phá vỡ hoặc xâm phạm tính bảo mật của hệ thống, mạng hoặc thiết bị.
 - **Cơ chế bảo mật (Security mechanism)**: Một tiến trình (hoặc một thiết bị được tích hợp để thực hiện tiến trình) được thiết kế để phát hiện, ngăn chặn tấn công bảo mật hoặc phục hồi tổn hại sau những cuộc tấn công.
-- **Dịch vụ bảo mật (Security service)**: Một tiến trình tăng bảo mật của hệ thống xử lý và truyền phát dữ liệu trong tổ chức. Nó sẽ đếm các cuộc tấn công và đưa ra quyết định sẽ tạo ra hoặc sử dụng cơ chế bảo mật nào cho hệ thống.
+- **Dịch vụ bảo mật (Security service)**: Một tiến trình tăng bảo mật của hệ thống xử lý và truyền phát dữ liệu. Thực hiện đếm các cuộc tấn công, đưa ra quyết định tạo ra hoặc sử dụng cơ chế bảo mật nào cho hệ thống.
 
 ## 1.3: Tấn công bảo mật (Security attacks)
 
@@ -63,13 +63,14 @@ Tấn công thụ động có 2 kiểu là lấy cắp nội dung tin nhắn (re
 
   ![Release of message contents](./img/ReleaseOfMessageContents.png)
 
-  Một cuộc nói chuyện qua điện thoại, một tin nhắn, một tệp tin được gửi đi có thể chứa các thông tin nhạy cảm và bảo mật. Chúng ta cần ngăn những kẻ tấn công biêt được, lấy được những thông tin này.
+  Một cuộc nói chuyện qua điện thoại, một tin nhắn, một tệp tin được gửi đi có thể chứa các thông tin nhạy cảm và bảo mật. Chúng ta cần ngăn những kẻ tấn công biết được, lấy được những thông tin này.
 
 - **Phân tích lưu lượng (traffic analysis)**:
 
   ![Traffic analysis](./img/TrafficAnalysis.png)
 
   Giả sử rằng chúng ta có cách che giấu nội dung của tin nhắn hoặc các thông tin khác để đối thủ, ngay cả khi họ bắt được tin nhắn thì cũng không thể trích xuất thông tin từ thông điệp. Kỹ thuật phổ biến để che giấu nội dung là mã hóa. Trong trường họp này kẻ tấn công không thể được được nội dung của tin nhắn mà chỉ hiểu được kiểu mẫu và độ dài của mã hóa.
+  Kẻ tấn công thực hiện phân tích các mẫu và siêu dữ liệu của lưu lượng mạng để thu thập thông tin về hệ thống, mạng hoặc thiết bị.
 
 Tấn công thụ động khó bị phát hiện vì không thay đổi dữ liệu hoặc tài nguyên hệ thống. Thông thường cả người gửi và người nhận tin nhắn đều không thể xác định được tin nhắn được đọc bởi bên thứ 3. Tuy nhiên mã hóa dữ liệu trước khi gửi đi là một cách hữu hiệu để ngăn chặn các cuộc tấn công thụ động thay vì cố tình tìm kiếm và phát hiện các cuộc tấn công.
 
@@ -78,15 +79,15 @@ Tấn công thụ động khó bị phát hiện vì không thay đổi dữ li�
 Tấn công chủ động liên quan đến thay dổi luồng dữ liệu (data stream) hoặc tạo ra một luồng dữ liệu sai.
 Có thể chia tấn công chủ động là 4 loại:
 
-- **Giả mạo (Masquerade)**: Diễn ra khi mà một thực thể giả mạo một thực thể khác. Tấn công giả mạo thường đi kèm theo hình thức tấn công chủ động khác. Ví dụ, trình tự xác thực có thể được mô phỏng sau khi một trình tự xác thực đúng được thực hiện.
+- **Giả mạo (Masquerade)**: Diễn ra khi kẻ tấn công giả mạo một thực thể đã được xác thực để có được quyền truy cập trái phép vào hệ thống. Tấn công giả mạo thường đi kèm theo hình thức tấn công chủ động khác.
 
   ![Masquerade](./img/Masquerade.png)
 
-- **Phát lại (Replay)**: Kẻ tấn công bắt lấy một tin nhắn được truyền đi thông qua một kênh bị động sau đó phát lại tin nhắn gian lận hoặc trì hoãn một thời gian.
+- **Phát lại (Replay)**: Kẻ tấn công bắt lấy một tin nhắn được truyền đi thông qua một kênh bị động sau đó phát lại một tin nhắn gian lận khác hoặc trì hoãn nó một thời gian.
 
   ![Replay](./img/Replay.png)
 
-- **Sửa đổi tin nhắn (Modification of message)**: Kẻ tấn công sửa đổi tin nhắn đã được gửi đi. Người nhận có thể nhận được tin nhắn không an toàn hoặc vô nghĩa. Kiểu tấn công này sử dụng để thao túng nội dung tin nhắn hoặc làm gián đoạn quá trình giao tiếp.
+- **Sửa đổi tin nhắn (Modification of message)**: Kẻ tấn công sửa đổi tin nhắn đã được gửi đi khiến cho người nhận có thể nhận được một tin nhắn không an toàn hoặc vô nghĩa. Kiểu tấn công này sử dụng để thao túng nội dung tin nhắn hoặc làm gián đoạn quá trình giao tiếp.
 
   ![Modification of Message](./img/ModificationOfMessages.png)
 
@@ -98,16 +99,17 @@ Khá là khó để ngăn chặn tuyệt đối các cuộc tấn công chủ đ
 
 ### 1.4 Dịch vụ bảo mật (Security services)
 
-X800 định nghĩa 1 dịch vụ bảo mật là 1 dịch vụ đảm bảo an toàn của hệ thống và quá trình truyền dữ liệu
-RFC 2828 định nghĩa một tiến trình hoặc một dịch vụ được cấp bở một hệ thống để đưa ra một loại bảo vệ đặc biệt cho tài nguyên của hệ thống, các dịch vụ bảo mật (security services) thực hiện các chính sách bảo mật và các cơ chế bảo mật.
+X.800 định nghĩa 1 dịch vụ bảo mật là 1 dịch vụ đảm bảo an toàn của hệ thống và quá trình truyền dữ liệu
+
+RFC 2828 định nghĩa một tiến trình hoặc một dịch vụ thực hiện bảo vệ đặc biệt cho tài nguyên của hệ thống là các dịch vụ bảo mật, thứ mà thực hiện các chính sách và các cơ chế bảo mật.
 
 X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc biệt (specific services).
 
 ![Security services X800](./img/SecurityServicesX800.svg)
 
-- **Xác thực (Authentication)**: Là tiến trình xác thực người dùng hoặc thiết bị nhằm mục đích cấp phép hoặc từ chối truy cập vào hệ thống hoặc thiết bị. Khi khởi tạo kết nối cần đảm bảo 2 thực thể phải được xác thực sau đó kết nối của 2 thực thể phải được đảm bảo là không bị cân thiệp.
-  - **Xác thực ngang hàng (Peer entity authentication)**: Sử dụng cùng với kết nối logic để xác thực của các thực thể được kết nối. Hai thực thể được coi là ngang hàng nếu như giao tiếp với nhau cùng một giao thức nhưng khác hệ thống. Xác thực ngang hàng sử dụng khi khởi tạo hoặc trong quá trình truyền dữ liệu trên một kết nối. Bên cạnh đó liên tục xác nhận rằng thực thể cần được xác thực không phải là thực thể giả mạo hoặc được phát lại (replay) của kết nối trước đó.
-  - **Xác thực nguồn gốc dữ liệu (Data-Origin Authentication)**: Trong truyền tải phi kết nối (connectionless transfer), đảm bảo rằng thông tin mà người nhận nhận được là giống với thông tin gửi đi. Kiểu dịch vụ này không hỗ trợ chống lại việc nhân bản dữ liệu.
+- **Xác thực (Authentication)**: Là quá trình xác thực người dùng hoặc thiết bị nhằm mục đích cấp phép hoặc từ chối truy cập vào hệ thống hoặc thiết bị. Khi khởi tạo kết nối cần đảm bảo 2 thực thể phải được xác thực sau đó kết nối của 2 thực thể phải được đảm bảo là không bị cân thiệp.
+  - **Xác thực ngang hàng (Peer entity authentication)**: Sử dụng cùng với kết nối logic để xác thực các thực thể được kết nối. Hai thực thể được coi là ngang hàng nếu như giao tiếp với nhau cùng một giao thức nhưng khác hệ thống. Xác thực ngang hàng sử dụng khi khởi tạo hoặc trong quá trình truyền dữ liệu trên một kết nối. Bên cạnh đó liên tục xác nhận rằng thực thể cần được xác thực không phải là thực thể giả mạo hoặc được phát lại (replay) của kết nối trước đó.
+  - **Xác thực nguồn gốc dữ liệu (Data-Origin Authentication)**: Đảm bảo dữ liệu mà người nhận nhận được là giống với thông tin gửi đi trong truyền tải phi kết nối (connectionless transfer). Kiểu dịch vụ này không hỗ trợ chống lại việc nhân bản dữ liệu.
 - **Điểu khiển truy cập (Access control)**: Liên quan đến việc sử dụng các chính sách và thủ tục để xác định ai được phép truy cập các tài nguyên cụ thể trong một hệ thống. Là khả năng giới hạn và điều khiển các truy cập vào máy chủ hệ thống. Để làm được vậy mỗi thực thể muốn truy cập vào hệ thống trước tiên cần phải được xác thực.
 - **Bảo mật dữ liệu (Data confidentiality)**: Bảo vệ dữ liệu khỏi bị truy cập hoặc tiết lộ một cách trái phép.
   - **Bảo mật kết nối (Connection confidentiality)**: Bảo vệ dữ liệu của tất cả người dùng trên một kết nối.
