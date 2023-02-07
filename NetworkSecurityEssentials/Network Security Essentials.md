@@ -110,38 +110,39 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
 - **Xác thực (Authentication)**: Là quá trình xác thực người dùng hoặc thiết bị nhằm mục đích cấp phép hoặc từ chối truy cập vào hệ thống hoặc thiết bị. Khi khởi tạo kết nối cần đảm bảo 2 thực thể phải được xác thực sau đó kết nối của 2 thực thể phải được đảm bảo là không bị cân thiệp.
   - **Xác thực ngang hàng (Peer entity authentication)**: Sử dụng cùng với kết nối logic để xác thực các thực thể được kết nối. Hai thực thể được coi là ngang hàng nếu như giao tiếp với nhau cùng một giao thức nhưng khác hệ thống. Xác thực ngang hàng sử dụng khi khởi tạo hoặc trong quá trình truyền dữ liệu trên một kết nối. Bên cạnh đó liên tục xác nhận rằng thực thể cần được xác thực không phải là thực thể giả mạo hoặc được phát lại (replay) của kết nối trước đó.
   - **Xác thực nguồn gốc dữ liệu (Data-Origin Authentication)**: Đảm bảo dữ liệu mà người nhận nhận được là giống với thông tin gửi đi trong truyền tải phi kết nối (connectionless transfer). Kiểu dịch vụ này không hỗ trợ chống lại việc nhân bản dữ liệu.
-- **Điểu khiển truy cập (Access control)**: Liên quan đến việc sử dụng các chính sách và thủ tục để xác định ai được phép truy cập các tài nguyên cụ thể trong một hệ thống. Là khả năng giới hạn và điều khiển các truy cập vào máy chủ hệ thống. Để làm được vậy mỗi thực thể muốn truy cập vào hệ thống trước tiên cần phải được xác thực.
+- **Điều khiển truy cập (Access control)**: Liên quan đến việc sử dụng các chính sách và thủ tục để xác định ai được phép truy cập các tài nguyên cụ thể trong một hệ thống. Là khả năng giới hạn và điều khiển các truy cập vào máy chủ hệ thống. Để làm được vậy mỗi thực thể muốn truy cập vào hệ thống trước tiên cần phải được xác thực.
 - **Bảo mật dữ liệu (Data confidentiality)**: Bảo vệ dữ liệu khỏi bị truy cập hoặc tiết lộ một cách trái phép.
   - **Bảo mật kết nối (Connection confidentiality)**: Bảo vệ dữ liệu của tất cả người dùng trên một kết nối.
   - **Bảo mật phi kết nối (Connectionless confidentiality)**: Bảo vệ dữ liệu của tất cả người dùng trong một khối dữ liệu đơn (a single data block).
+  - **Bảo mật trường được chọn (Selective-Field Confidentiality)**: Bảo mật các trường được chọn trong dữ liệu người dùng trên một kết nối hoặc trong một khối dữ liệu.
   - **Bảo mật lưu lượng luồng dữ liệu (Traffic-Flow confidentiality)**: Là các kỹ thuật phát minh ra để ẩn/ làm giả các mẫu lưu lượng (traffic pattern) nhằm ngăn các cuộc tấn công bằng cách phân tích lưu lượng (statistical traffic analysis attacks).
 - **Toàn vẹn dữ liệu (Data integrity)**: Đảm bảo rằng dữ liệu nhận được chính xác được gửi đi bởi một thực thể đã được cấp phép.
-  - **Connection integrity with recovery**: Đảm bảo mọi dữ liệu của người dùng đã kết nối chính xác, nhất quán. Phát hiện mọi thao tác chỉnh sửa, thêm xoá, hoặc phát phát dư liêu trên đường truyền. Nếu phát hiện các thao tác trên dịch vụ sẽ cố gắng khôi phục dữ liệu về tình trạng "toàn vẹn".
+  - **Connection integrity with recovery**: Đảm bảo mọi dữ liệu của người dùng đã kết nối chính xác, nhất quán. Phát hiện mọi thao tác chỉnh sửa, thêm, xóa, hoặc phát phát dữ liệu trên đường truyền. Nếu phát hiện các thao tác trên dịch vụ sẽ cố gắng khôi phục dữ liệu về tình trạng "toàn vẹn".
   - **Connection integrity without recovery**: Chỉ ra các hành động có can thiệp tới dữ liệu nhưng không cố gắng khôi phục dữ liệu.
-  - **Selective-Field Connection integrity**: Cung cấp tính đúng đắn cho một số trường thuộc khối dữ liệu, chỉ ra các trường đã bị sửa, thêm, xoá, hoặc phát lại trong số các trường đã chọn.
+  - **Selective-Field Connection integrity**: Cung cấp tính đúng đắn cho một số trường thuộc khối dữ liệu, chỉ ra các trường đã bị sửa, thêm, xóa, hoặc phát lại trong số các trường đã chọn.
   - **Connectionless integrity**: Cung cấp tính toàn vẹn của một khối dữ liệu phi kết nối (connectionless data block), phát hiện sửa đổi và phát lại dữ liệu.
-  - **Selective-Field Connectionless Integrity**: Cung cấp tính đúng đăn cho một số trường thược khối dữ liệu phi kết nối (connectionless data block), chỉ ra trường nào bị thay đổi trong các trường đã chọn.
-- **Nonrepudiation**: Ngăn chặn người nhận hoặc người gửi từ chối một tin nhắn đã được truyền đi. Như vậy, khi mà một tin nhắn đã được gửi đi, người nhận có thể chứng mình rằng người gửi đã thực sự gửi tin nhắn đó. Tương tự, khi mà tin nhắn được nhận, người gửi cũng có thể chứng minh rằng người nhận đã thật sự nhận được tin nhắn đó.
+  - **Selective-Field Connectionless Integrity**: Cung cấp tính đúng đắn cho một số trường thuộc khối dữ liệu phi kết nối (connectionless data block), chỉ ra trường nào bị thay đổi trong các trường đã chọn.
+- **Nonrepudiation**: Ngăn chặn người nhận hoặc người gửi từ chối một tin nhắn đã được truyền đi. Như vậy, khi mà một tin nhắn đã được gửi đi, người nhận có thể chứng minh rằng người gửi đã thực sự gửi tin nhắn đó. Tương tự, khi mà tin nhắn được nhận, người gửi cũng có thể chứng minh rằng người nhận đã thật sự nhận được tin nhắn đó.
 
 ### 1.5 Cơ chế bảo mật (Security mechanisms)
 
 ![Security mechanisms](./img/SecurityMechanismsX800.svg)
 
 - **Cơ chế bảo mật cụ thể (Specific security mechanisms)**
-  - **Encipherment (Mã Hoá)**: Sử dụng các thuật toán để biến đổi dữ liệu một cách khó hiểu. Việc mã hoá và giải mã có thể phụ thuộc vào 0 hoặc nhiều khoá.
-  - **Digital Signature (Chữ ký số)**: Dữ liệu được thêm vào tin nhắn hoặc tài liệu cho phép người nhận xác thực được nguồn gốc và tính đúng đắn của thông tin nhận được.
-  - **Access Control (Kiểm soát truy cập)**: cơ chế kiểm tra các quyền truy cập vào tài nguyên.
-  - **Data Integrity (Toàn vẹn dữ liệu)**: Các cơ chế sử dụng để đảm bảo tính đúng đắn của khối dữ liệu hoặc luồng dữ liệu (stream of data units).
-  - **Authentication Exchange (Trao đổi xác thực)**: Một cơ chế xác thực danh tính của thực thể bằng cách trao đổi thông tin. _Một đối tượng giải mã thành công một tin nhắn bằng cách sử dụng 1 khoá trong cặp khoá (key pair). Họ có thể suy ra người có khóa tương ứng, cũng chính là danh tính người gửi tin nhắn_
-  - **Traffic Padding (Đệm lưu lượng)**: Là kỹ chèn các bit vào các khoảng trống trong luồng dữ liệu (data stream) nhằm hạn chế, gây cản trở việc phân tích lưu lượng.
-  - **Routing Control (Kiểm soát định tuyến)**: Cho phép lựa chọn đường đi về mặt vật lý cho một số dữ liệu, có thể thay đổi đường đi này, đặc biệt là khi có nghi ngờ về việc thiếu bảo mật.
-  - **Notarization (Công chứng)**: Sử dụng một bên thứ 3 để đảm bảo bảo mật trong quá trình truyền dữ liệu.
+  - **Mã Hoá (Encipherment)**: Sử dụng các thuật toán để biến đổi dữ liệu một cách khó hiểu. Việc mã hoá và giải mã có thể phụ thuộc vào 0 hoặc nhiều khoá.
+  - **Chữ ký số (Digital Signature)**: Dữ liệu được thêm vào tin nhắn hoặc tài liệu cho phép người nhận xác thực được nguồn gốc và tính đúng đắn của thông tin nhận được.
+  - **Kiểm soát truy cập (Access Control)**: cơ chế kiểm tra các quyền truy cập vào tài nguyên.
+  - **Toàn vẹn dữ liệu (Data Integrity)**: Các cơ chế sử dụng để đảm bảo tính đúng đắn của khối dữ liệu hoặc luồng dữ liệu (stream of data units).
+  - **Trao đổi xác thực (Authentication Exchange)**: Một cơ chế xác thực danh tính của thực thể bằng cách trao đổi thông tin. _Một đối tượng giải mã thành công một tin nhắn bằng cách sử dụng 1 khoá trong cặp khoá (key pair). Họ có thể suy ra người có khóa tương ứng, cũng chính là danh tính người gửi tin nhắn_
+  - **Đệm lưu lượng (Traffic Padding)**: Là kỹ thuật chèn các bit vào các khoảng trống trong luồng dữ liệu (data stream) nhằm hạn chế, gây cản trở việc phân tích lưu lượng.
+  - **Kiểm soát định tuyến (Routing Control)**: Cho phép lựa chọn đường đi về mặt vật lý cho một số dữ liệu, có thể thay đổi đường đi này, đặc biệt là khi có nghi ngờ về việc thiếu bảo mật.
+  - **Công chứng (Notarization)**: Sử dụng một bên thứ 3 để đảm bảo bảo mật trong quá trình truyền dữ liệu.
 - **Cơ chế bảo mật phổ biến (Pervasive security mechanisms)**: Các cơ chế không dành riêng cho bất kỳ giao thức hay dịch vụ bảo mật OSI cụ thể nào.
-  - **Trusted Functionality (Chức năng đáng tin cậy)**: thứ được coi là đúng đối với một số tiêu chí.
-  - **Security Label (Nhãn bảo mật)**: Tạo ràng buộc với một tài tài nguyên (hoặc một khối dữ liệu) để đặt tên hoặc định rõ các thuộc tính bảo mật của tài nguyên đó.
-  - **Event Detection (Phát hiện sự kiện)**: Phát hiện các sự kiện liên quan tới bảo mật.
-  - **Security Audit Trail (Con đường kiểm tra bảo mật)**: Thu tập dữ liệu có tiềm năng để thuận tiện đánh giá bảo mật.
-  - **Security Recovery (Phục hồi bảo mật)**: Tuỳ theo yêu cầu của cơ chế, chẳng hạn như các chức năng quản lý và xử lý sự kiện, đồng thời thực hiện các hành động khôi phục.
+  - **Chức năng đáng tin cậy (Trusted Functionality)**: thứ được coi là đúng đối với một số tiêu chí.
+  - **Nhãn bảo mật (Security Label)**: Tạo ràng buộc với một tài nguyên (hoặc một khối dữ liệu) để đặt tên hoặc định rõ các thuộc tính bảo mật của tài nguyên đó.
+  - **Phát hiện sự kiện (Event Detection)**: Phát hiện các sự kiện liên quan tới bảo mật.
+  - **Con đường kiểm tra bảo mật (Security Audit Trail)**: Thu tập dữ liệu có tiềm năng để thuận tiện đánh giá bảo mật.
+  - **Phục hồi bảo mật (Security Recovery)**: Tuỳ theo yêu cầu của cơ chế, chẳng hạn như các chức năng quản lý và xử lý sự kiện cần các thao khôi phục dữ liệu.
 
 **Mối quan hệ giữa Dịch vụ bảo mật và Cơ chế bảo mật (Relationship Between Security Services And Mechanisms)**
 
@@ -150,12 +151,13 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
 ### 1.6 Một mô hình an ninh mạng (Model for Network Security)
 
 ![Model for Network Security](./img/ModelForNetworkSecurity.png)
-Các yếu tố bảo mật được bật khi cần thiết hoặc theo mong muốn của người sử dụng nhằm bảo vệ thông tin được gửi đi khỏi các kẻ tấn công - người mà gây ra các mối đe doạ liên quan đến bảo mật, xác thực, và nhiều vấn đề khác. Tất cả các kỹ thuật cung cấp bảo mật đều có 2 phần:
+Các yếu tố bảo mật được bật khi cần thiết hoặc theo mong muốn của người sử dụng nhằm bảo vệ thông tin được gửi đi khỏi các kẻ tấn công - người mà gây ra các mối đe dọa liên quan đến bảo mật, xác thực, và nhiều vấn đề khác. 
 
+Tất cả các kỹ thuật cung cấp bảo mật đều có 2 phần:
 1. Làm biến đổi các thông tin bảo mật cần gửi đi. Ví dụ:
    - Mã hoá tin nhắn - khiến kẻ tấn công không thể biết được nội dung tin nhắn.
    - Ký số - thêm các thông tin dựa trên nội dung thông tin nhằm xác định danh tính người gửi
-2. Một thông tin bí mật được biết bởi 2 người và mong muốn là chỉ 2 người biết. Ví dụ như khoá (key) thứ góp phần tạo ra các đoạn dữ liệu sau mã hoá cũng như phần dữ liệu được thêm vào (ky số)
+2. Một thông tin bí mật chỉ được biết bởi 2 thực thể tham gia giao tiếp. Ví dụ như khoá (key) thứ góp phần tạo ra các đoạn dữ liệu sau mã hoá cũng như phần dữ liệu được thêm vào khi thực hiện ký số
 
 Một bên thứ 3 đáng tin (trusted third party) là cần thiết để có được bảo mật trong quá trình truyền dữ liệu. Bên thứ 3 này phân phối các thông tin bảo mật tới 2 thực thể thực hiện trao đổi thông tin và ngăn kẻ tấn công tiếp cận được những thông tin bảo mật này. Đồng thời bên thứ 3 này cũng có trách nhiệm xác minh độ tin cậy của người gửi và người nhận trong quá trình trao đổi thông tin này
 
