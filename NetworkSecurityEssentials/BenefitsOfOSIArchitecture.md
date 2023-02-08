@@ -1,4 +1,4 @@
-Benefits of OSI Architecture:
+# Benefits of OSI Architecture
 
 Below listed are the benefits of OSI Architecture in an organization:
 

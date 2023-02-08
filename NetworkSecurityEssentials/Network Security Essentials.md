@@ -13,8 +13,8 @@ Thay đổi lơn thứ hai trong ngành an toàn thông tin là sự ra cu
 ### Một số khái niệm về an toàn thông tin (A Definition of Computer Security)
 
 - **Định nghĩa:**
-Theo Sổ tay bảo mật máy tính NIST (NIST95):\
-Sự bảo vệ cung cấp cho một hệ thống thông tin tự động nhằm mục tiêu duy trì tính toàn vẹn, khả dụng và bảo mật các tài nguyên thuộc hệ thống (bao gồm phần cứng phần mềm, firmware, thông tin/ dữ liệu và viễn thông)
+  Theo Sổ tay bảo mật máy tính NIST (NIST95):\
+  Sự bảo vệ cung cấp cho một hệ thống thông tin tự động nhằm mục tiêu duy trì tính toàn vẹn, khả dụng và bảo mật các tài nguyên thuộc hệ thống (bao gồm phần cứng phần mềm, firmware, thông tin/ dữ liệu và viễn thông)
 
 - **Tính bảo mật (Confidentiality):**
 
@@ -144,16 +144,17 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
   - **Con đường kiểm tra bảo mật (Security Audit Trail)**: Thu tập dữ liệu có tiềm năng để thuận tiện đánh giá bảo mật.
   - **Phục hồi bảo mật (Security Recovery)**: Tuỳ theo yêu cầu của cơ chế, chẳng hạn như các chức năng quản lý và xử lý sự kiện cần các thao khôi phục dữ liệu.
 
-**Mối quan hệ giữa Dịch vụ bảo mật và Cơ chế bảo mật (Relationship Between Security Services And Mechanisms)**
+**Mối quan hệ giữa Dịch vụ bảo mật và Cơ chế bảo mật (Relationship Between Security Services And Mechanisms):**
 
 ![Relationship Between Security Services And Mechanisms](./img/RelationshipBetweenSecurityServicesAndMechanisms.png)
 
 ### 1.6 Một mô hình an ninh mạng (Model for Network Security)
 
 ![Model for Network Security](./img/ModelForNetworkSecurity.png)
-Các yếu tố bảo mật được bật khi cần thiết hoặc theo mong muốn của người sử dụng nhằm bảo vệ thông tin được gửi đi khỏi các kẻ tấn công - người mà gây ra các mối đe dọa liên quan đến bảo mật, xác thực, và nhiều vấn đề khác. 
+Các yếu tố bảo mật được bật khi cần thiết hoặc theo mong muốn của người sử dụng nhằm bảo vệ thông tin được gửi đi khỏi các kẻ tấn công - người mà gây ra các mối đe dọa liên quan đến bảo mật, xác thực, và nhiều vấn đề khác.
 
 Tất cả các kỹ thuật cung cấp bảo mật đều có 2 phần:
+
 1. Làm biến đổi các thông tin bảo mật cần gửi đi. Ví dụ:
    - Mã hoá tin nhắn - khiến kẻ tấn công không thể biết được nội dung tin nhắn.
    - Ký số - thêm các thông tin dựa trên nội dung thông tin nhằm xác định danh tính người gửi
@@ -169,12 +170,13 @@ Một bên thứ 3 đáng tin (trusted third party) là cần thiết để có 
 4. Chỉ định một giao thức thứ mà sử dụng thuật toán bảo mật và thông tin bí mật được
    sử dụng bở 2 đầu của cuộc giao tiếp
 
-**Mô hình bảo mật truy cập mạng**
+**Mô hình bảo mật truy cập mạng:**
 
 ![Network Access Security Model](./img/NetworkAccessSecurityModel.png)
 
+## New words
 
-# New words
+---
 
 | EN            | VI                       |
 | ------------- | ------------------------ |
