@@ -1,4 +1,4 @@
-# Chương 1: Giới thiệu
+# **Chương 1: Giới thiệu**
 
 _(Chương 1 Network Security Essentials)_
 
@@ -8,9 +8,9 @@ Với sự xuất hiện của máy tính, nhu cầu về một công c
 
 Thay đổi lơn thứ hai trong ngành an toàn thông tin là sự ra của các hệ thống mạng. Để bảo vệ dữ liệu trong khi truyền tải giữa các máy tính với nhau, các biện pháp bảo mật mạng - network security là cần thiết. Thực ra, thuật ngữ bảo mật mạng không thật sự chính xác, vì rất nhiều công ty, chính phủ và trường học đều nối các thiết bị xử lý dữ liệu của họ với nhau trên một mạng. Một mạng này thường được gọi là một internet, và thuật ngữ bảo mật internet - internet security được sử dụng.
 
-## 1.1: Các khái niệm an toàn thông tin (Computer security concepts)
+## **1.1: Các khái niệm an toàn thông tin (Computer security concepts)**
 
-### Một số khái niệm về an toàn thông tin (A Definition of Computer Security)
+### **Một số khái niệm về an toàn thông tin (A Definition of Computer Security)**
 
 - **Định nghĩa:**
   Theo Sổ tay bảo mật máy tính NIST (NIST95):\
@@ -28,7 +28,9 @@ Thay đổi lơn thứ hai trong ngành an toàn thông tin là sự ra cu
 
 - **Tính khả dụng (Availability)** Đảm bảo hệ thống hoạt động bình thường dối với các đối tượng đã được cấp phép.
 
-### Những thách thức của an toàn thông tin (The Challenges of Computer Security)
+<div style="page-break-after: always;" />
+
+### **Những thách thức của an toàn thông tin (The Challenges of Computer Security)**
 
 1. Bảo mật không đơn giản với người mới. Các yêu cầu liên quan đến công việc bảo mật thường được đánh nhãn bởi những từ nghe có vẻ khá đơn giản và trực quan như: bảo mật, xác thực, toàn vẹn...Nhưng để hiểu được hoàn các cơ chế hoạt động thì không hề dễ dàng.
 2. Trong việc phát triển một cơ chế bảo mật hoặc thuật toán cụ thể, người ta luôn phải xem xét các tấn công có thể đối với những tính năng bảo mật đó. Trong nhiều trường hợp, các tấn công thành công được là nhờ xem xét kỹ lưỡng các cơ chế bằng nhiều cách làm tìm thấy lỗi hổng để rồi khai thác chúng.
@@ -41,7 +43,7 @@ Thay đổi lơn thứ hai trong ngành an toàn thông tin là sự ra cu
 9. Người ta vẫn cần xem xét có nên đưa có module liên quan đến bảo mật vào hệ thống thay vì suy nghĩ rằng nó là một phần không thể thiếu của hệ thống.
 10. Nhiều người dùng coi bảo mật mạnh gây cản trở hiệu quả cũng như tốc độ của hệ thống.
 
-## 1.2: Kiến trúc bảo mật OSI (The OSI security architecture)
+## **1.2: Kiến trúc bảo mật OSI (The OSI security architecture)**
 
 Kiến trúc bảo mật OSI định nghĩa một cách tiếp cận có hệ thống đối với 7 tầng của mô hình OSI nhằm đảm bảo bảo mật trong quá trình truyền dữ liệu trên không gian mạng. Nó đươc phát triển như một tiêu chuẩn quốc tế và đã được cộng đồng đón nhận
 
@@ -52,9 +54,9 @@ Kiến trúc bảo mật OSI tâp trung vào 3 khái niệm sau:
 - **Cơ chế bảo mật (Security mechanism)**: Một tiến trình (hoặc một thiết bị được tích hợp để thực hiện tiến trình) được thiết kế để phát hiện, ngăn chặn tấn công bảo mật hoặc phục hồi tổn hại sau những cuộc tấn công.
 - **Dịch vụ bảo mật (Security service)**: Một tiến trình tăng bảo mật của hệ thống xử lý và truyền phát dữ liệu. Thực hiện đếm các cuộc tấn công, đưa ra quyết định tạo ra hoặc sử dụng cơ chế bảo mật nào cho hệ thống.
 
-## 1.3: Tấn công bảo mật (Security attacks)
+## **1.3: Tấn công bảo mật (Security attacks)**
 
-### 1.3.1 Tấn công thụ động (Passive Attacks)
+### **1.3.1 Tấn công thụ động (Passive Attacks)**
 
 Các cuộc tấn công thụ động bản chất giống như nghe lén, theo dõi khi mà dữ liệu được truyền đi.
 Tấn công thụ động có 2 kiểu là lấy cắp nội dung tin nhắn (release of message contents) và phân tích lưu lượng (traffic analysis).
@@ -65,6 +67,8 @@ Tấn công thụ động có 2 kiểu là lấy cắp nội dung tin nhắn (re
 
   Một cuộc nói chuyện qua điện thoại, một tin nhắn, một tệp tin được gửi đi có thể chứa các thông tin nhạy cảm và bảo mật. Chúng ta cần ngăn những kẻ tấn công biết được, lấy được những thông tin này.
 
+<div style="page-break-after: always;" />
+
 - **Phân tích lưu lượng (traffic analysis)**:
 
   ![Traffic analysis](./img/TrafficAnalysis.png)
@@ -74,7 +78,7 @@ Tấn công thụ động có 2 kiểu là lấy cắp nội dung tin nhắn (re
 
 Tấn công thụ động khó bị phát hiện vì không thay đổi dữ liệu hoặc tài nguyên hệ thống. Thông thường cả người gửi và người nhận tin nhắn đều không thể xác định được tin nhắn được đọc bởi bên thứ 3. Tuy nhiên mã hóa dữ liệu trước khi gửi đi là một cách hữu hiệu để ngăn chặn các cuộc tấn công thụ động thay vì cố tình tìm kiếm và phát hiện các cuộc tấn công.
 
-### 1.3.2 Tấn công chủ động (Active attacks)
+### **1.3.2 Tấn công chủ động (Active attacks)**
 
 Tấn công chủ động liên quan đến thay dổi luồng dữ liệu (data stream) hoặc tạo ra một luồng dữ liệu sai.
 Có thể chia tấn công chủ động là 4 loại:
@@ -97,7 +101,9 @@ Có thể chia tấn công chủ động là 4 loại:
 
 Khá là khó để ngăn chặn tuyệt đối các cuộc tấn công chủ động vì có quá nhiều lỗ hổng tiềm ẩn về mặt vật lý, phần mềm và cả mạng. Chính vì thế mục tiêu là phát hiện rồi phục hồi sau bất kỳ sự gián đoạn hoặc chậm trễ nào do chúng gây ra.
 
-### 1.4 Dịch vụ bảo mật (Security services)
+<div style="page-break-after: always;" />
+
+### **1.4 Dịch vụ bảo mật (Security services)**
 
 X.800 định nghĩa 1 dịch vụ bảo mật là 1 dịch vụ đảm bảo an toàn của hệ thống và quá trình truyền dữ liệu
 
@@ -124,7 +130,9 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
   - **Selective-Field Connectionless Integrity**: Cung cấp tính đúng đắn cho một số trường thuộc khối dữ liệu phi kết nối (connectionless data block), chỉ ra trường nào bị thay đổi trong các trường đã chọn.
 - **Nonrepudiation**: Ngăn chặn người nhận hoặc người gửi từ chối một tin nhắn đã được truyền đi. Như vậy, khi mà một tin nhắn đã được gửi đi, người nhận có thể chứng minh rằng người gửi đã thực sự gửi tin nhắn đó. Tương tự, khi mà tin nhắn được nhận, người gửi cũng có thể chứng minh rằng người nhận đã thật sự nhận được tin nhắn đó.
 
-### 1.5 Cơ chế bảo mật (Security mechanisms)
+<div style="page-break-after: always;" />
+
+### **1.5 Cơ chế bảo mật (Security mechanisms)**
 
 ![Security mechanisms](./img/SecurityMechanismsX800.svg)
 
@@ -148,7 +156,9 @@ X800 chia các dịch vụ này vào 5 loại và có 14 dịch vụ đặc bi�
 
 ![Relationship Between Security Services And Mechanisms](./img/RelationshipBetweenSecurityServicesAndMechanisms.png)
 
-### 1.6 Một mô hình an ninh mạng (Model for Network Security)
+<div style="page-break-after: always;" />
+
+### **1.6 Một mô hình an ninh mạng (Model for Network Security)**
 
 ![Model for Network Security](./img/ModelForNetworkSecurity.png)
 Các yếu tố bảo mật được bật khi cần thiết hoặc theo mong muốn của người sử dụng nhằm bảo vệ thông tin được gửi đi khỏi các kẻ tấn công - người mà gây ra các mối đe dọa liên quan đến bảo mật, xác thực, và nhiều vấn đề khác.
@@ -169,6 +179,8 @@ Một bên thứ 3 đáng tin (trusted third party) là cần thiết để có 
 3. Phát triền các phương pháp để phân phối và chia sẻ thông tin bí mật (secret information)
 4. Chỉ định một giao thức thứ mà sử dụng thuật toán bảo mật và thông tin bí mật được
    sử dụng bở 2 đầu của cuộc giao tiếp
+
+<div style="page-break-after: always;" />
 
 **Mô hình bảo mật truy cập mạng:**
 
